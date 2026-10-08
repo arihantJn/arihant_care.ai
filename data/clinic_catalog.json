@@ -1,0 +1,30 @@
+{
+  "specialties": [
+    {"id":"family-medicine","name":"Family Medicine","description":"Checkups and general primary care"},
+    {"id":"cardiology","name":"Cardiology","description":"Heart and circulation care"},
+    {"id":"dermatology","name":"Dermatology","description":"Skin, hair and nail care"},
+    {"id":"pediatrics","name":"Pediatrics","description":"Care for children and teens"},
+    {"id":"orthopedics","name":"Orthopedics","description":"Bone, joint and muscle care"},
+    {"id":"gynecology","name":"Gynecology","description":"Women's health services"},
+    {"id":"neurology","name":"Neurology","description":"Brain and nervous-system care"},
+    {"id":"ophthalmology","name":"Ophthalmology","description":"Eye health and vision care"}
+  ],
+  "doctors": [
+    {"id":"fm-chen","name":"Dr. Maya Chen","specialty_id":"family-medicine","clinic":"Willow Creek Clinic","experience":"Family physician"},
+    {"id":"fm-ross","name":"Dr. Ethan Ross","specialty_id":"family-medicine","clinic":"Willow Creek Clinic","experience":"Primary care"},
+    {"id":"card-patel","name":"Dr. Asha Patel","specialty_id":"cardiology","clinic":"Heart & Vascular Center","experience":"Cardiologist"},
+    {"id":"card-brooks","name":"Dr. Noah Brooks","specialty_id":"cardiology","clinic":"Heart & Vascular Center","experience":"Cardiologist"},
+    {"id":"derm-kim","name":"Dr. Olivia Kim","specialty_id":"dermatology","clinic":"Northside Specialty Clinic","experience":"Dermatologist"},
+    {"id":"derm-green","name":"Dr. Lucas Green","specialty_id":"dermatology","clinic":"Northside Specialty Clinic","experience":"Dermatologist"},
+    {"id":"ped-wilson","name":"Dr. Sofia Wilson","specialty_id":"pediatrics","clinic":"Willow Creek Clinic","experience":"Pediatrician"},
+    {"id":"ped-davis","name":"Dr. Amir Davis","specialty_id":"pediatrics","clinic":"Willow Creek Clinic","experience":"Pediatrician"},
+    {"id":"ortho-jones","name":"Dr. Grace Jones","specialty_id":"orthopedics","clinic":"Northside Specialty Clinic","experience":"Orthopedic specialist"},
+    {"id":"ortho-miller","name":"Dr. Leo Miller","specialty_id":"orthopedics","clinic":"Northside Specialty Clinic","experience":"Orthopedic specialist"},
+    {"id":"gyn-thomas","name":"Dr. Priya Thomas","specialty_id":"gynecology","clinic":"Women's Health Pavilion","experience":"Women's health physician"},
+    {"id":"gyn-clark","name":"Dr. Emma Clark","specialty_id":"gynecology","clinic":"Women's Health Pavilion","experience":"Women's health physician"},
+    {"id":"neuro-wright","name":"Dr. Daniel Wright","specialty_id":"neurology","clinic":"Neuroscience Center","experience":"Neurologist"},
+    {"id":"neuro-hall","name":"Dr. Zara Hall","specialty_id":"neurology","clinic":"Neuroscience Center","experience":"Neurologist"},
+    {"id":"eye-young","name":"Dr. James Young","specialty_id":"ophthalmology","clinic":"Vision Care Center","experience":"Eye physician"},
+    {"id":"eye-adams","name":"Dr. Mia Adams","specialty_id":"ophthalmology","clinic":"Vision Care Center","experience":"Eye physician"}
+  ]
+}

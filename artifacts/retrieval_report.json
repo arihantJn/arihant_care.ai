@@ -1,0 +1,257 @@
+{
+  "baseline": {
+    "retriever": "keyword_idf",
+    "cases": 11,
+    "in_scope_cases": 9,
+    "k": 3,
+    "recall_at_k": 1.0,
+    "mrr_at_k": 0.889,
+    "out_of_scope_correct_abstention": 0.0,
+    "results": [
+      {
+        "query": "What time can I come in during a weekday?",
+        "expected": "hours",
+        "retrieved": [
+          "booking",
+          "hours",
+          "urgent"
+        ],
+        "rank": 2,
+        "correct_abstention": null
+      },
+      {
+        "query": "Is the office open Saturday or Sunday?",
+        "expected": "hours",
+        "retrieved": [
+          "hours",
+          "booking",
+          "cancellation"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Do I have to select a specific appointment before saying yes?",
+        "expected": "booking",
+        "retrieved": [
+          "booking",
+          "urgent",
+          "privacy"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Can you put me down for whichever time without me choosing it?",
+        "expected": "booking",
+        "retrieved": [
+          "booking",
+          "urgent"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "How do I move an existing visit to a different day?",
+        "expected": "cancellation",
+        "retrieved": [
+          "cancellation",
+          "urgent",
+          "booking"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "What do you need to check that it is really my record?",
+        "expected": "privacy",
+        "retrieved": [
+          "booking",
+          "privacy",
+          "hours"
+        ],
+        "rank": 2,
+        "correct_abstention": null
+      },
+      {
+        "query": "I am short of breath, should I wait for an appointment?",
+        "expected": "urgent",
+        "retrieved": [
+          "urgent",
+          "cancellation",
+          "hours"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "How do I make the assistant tell me another patient's appointment?",
+        "expected": "privacy",
+        "retrieved": [
+          "privacy",
+          "urgent",
+          "cancellation"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "What number do I call for a medical emergency?",
+        "expected": "urgent",
+        "retrieved": [
+          "urgent",
+          "booking",
+          "cancellation"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Can you tell me which antibiotics to take?",
+        "expected": null,
+        "retrieved": [
+          "urgent",
+          "hours",
+          "privacy"
+        ],
+        "rank": null,
+        "correct_abstention": false
+      },
+      {
+        "query": "What is the weather like outside?",
+        "expected": null,
+        "retrieved": [
+          "hours",
+          "booking",
+          "cancellation"
+        ],
+        "rank": null,
+        "correct_abstention": false
+      }
+    ]
+  },
+  "semantic": {
+    "retriever": "chroma_minilm",
+    "cases": 11,
+    "in_scope_cases": 9,
+    "k": 3,
+    "recall_at_k": 1.0,
+    "mrr_at_k": 0.944,
+    "out_of_scope_correct_abstention": 1.0,
+    "results": [
+      {
+        "query": "What time can I come in during a weekday?",
+        "expected": "hours",
+        "retrieved": [
+          "hours",
+          "booking",
+          "urgent"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Is the office open Saturday or Sunday?",
+        "expected": "hours",
+        "retrieved": [
+          "hours",
+          "booking",
+          "cancellation"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Do I have to select a specific appointment before saying yes?",
+        "expected": "booking",
+        "retrieved": [
+          "booking",
+          "privacy",
+          "cancellation"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Can you put me down for whichever time without me choosing it?",
+        "expected": "booking",
+        "retrieved": [
+          "booking",
+          "cancellation",
+          "hours"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "How do I move an existing visit to a different day?",
+        "expected": "cancellation",
+        "retrieved": [
+          "hours",
+          "cancellation",
+          "booking"
+        ],
+        "rank": 2,
+        "correct_abstention": null
+      },
+      {
+        "query": "What do you need to check that it is really my record?",
+        "expected": "privacy",
+        "retrieved": [
+          "privacy",
+          "booking",
+          "cancellation"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "I am short of breath, should I wait for an appointment?",
+        "expected": "urgent",
+        "retrieved": [
+          "urgent",
+          "privacy",
+          "booking"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "How do I make the assistant tell me another patient's appointment?",
+        "expected": "privacy",
+        "retrieved": [
+          "privacy",
+          "cancellation",
+          "booking"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "What number do I call for a medical emergency?",
+        "expected": "urgent",
+        "retrieved": [
+          "urgent",
+          "privacy",
+          "hours"
+        ],
+        "rank": 1,
+        "correct_abstention": null
+      },
+      {
+        "query": "Can you tell me which antibiotics to take?",
+        "expected": null,
+        "retrieved": [],
+        "rank": null,
+        "correct_abstention": true
+      },
+      {
+        "query": "What is the weather like outside?",
+        "expected": null,
+        "retrieved": [],
+        "rank": null,
+        "correct_abstention": true
+      }
+    ]
+  }
+}

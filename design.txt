@@ -1,0 +1,39 @@
+ajCares.ai — design and evaluation note
+
+## What it is
+
+ajCares.ai is a local appointment-scheduling demo. It uses fictional patients, policies, doctors, and appointment slots. It is not secure authentication or a production clinic system.
+
+## Design choices
+
+- **Python + FastAPI:** owns conversation state, rules, and scheduling tools.
+- **React + Vite:** provides the patient-facing chat and booking interface.
+- **SQLite + JSON:** store demo records and editable clinic, policy, and slot data.
+- **Three bounded agents:** the scheduler can manage appointments; the clinic-information agent is read-only; the reminder agent creates opted-in local previews and sends no messages. Deterministic routing is enough for these roles. LangGraph is not used.
+- **Narrow tools and explicit consent:** the scheduler checks availability, records a specific slot, and books, edits, or cancels. Booking requires a slot choice and separate confirmation. The agent reports success only after the tool confirms it.
+- **RAG for clinic policies:** ChromaDB stores vectors created with MiniLM embeddings. Keyword/IDF retrieval remains a fallback. Similarity ranks results; it is not a confidence probability.
+- **Optional local LLM:** Hugging Face Qwen2.5-0.5B can phrase answers from retrieved policy passages. It cannot choose slots or perform appointment actions. Deterministic cited answers remain the fallback.
+- **Click-first UI:** patients choose visit type, date, specialty, doctor, and slot from options. This reduces typing and makes the next step clear. Free text is still available for policy questions.
+- **Reviewed feedback:** ratings and reasons can inform future evaluation. They do not automatically change live behavior.
+
+## Evaluation and improvement loop
+
+The harness replays the same scenarios against isolated in-memory schedules. It checks the assistant's replies, tool events, and resulting appointments. Transcript checks alone cannot prove whether a booking happened.
+
+| Run | Result | What happened |
+|---|---:|---|
+| Before reinforcement | **9/11 (82%)** | After several times were offered, an unqualified “yes” led to an unsupported booking claim. |
+| After reinforcement | **11/11 (100%)** | The assistant asks for one specific slot, restates its date/time, and waits for confirmation. The happy-path booking still passes. |
+
+The evaluator records the failure as a structured reinforcement, then reruns the same cases. This demonstrates a repeatable improvement loop on a small suite; it is not proof of real-world safety or autonomous model training.
+
+## AI assistance and project-owner judgment
+
+- AI helped scaffold code and documentation.
+- The project owner directed the move to three specialist roles, local vector search, a small downloadable model, patient registration, feedback, and the ajCares.ai interface.
+- Iterative feedback led to date/doctor/slot cards, appointment editing and cancellation, clearer date entry, and fewer required typed replies.
+- Key design judgments: keep the LLM away from booking authority; limit each role's tools; require confirmation before changing appointments; use feedback for human-reviewed evaluation.
+
+## Production priority
+
+Replace name/date-of-birth lookup with verified authentication and authorization linked to the clinic's scheduling system. Add privacy and audit controls, clinician-approved policy content, and broader safety testing. Never enter real patient information in this demo.

@@ -1,0 +1,7 @@
+[
+  {"id":"booking","title":"Booking and confirmation","text":"Appointments are booked only after the patient chooses one specific available date and time and explicitly confirms that exact slot. A general yes is not confirmation when multiple slots are being discussed. Never claim an appointment is booked until the booking tool returns a confirmed appointment identifier."},
+  {"id":"cancellation","title":"Cancellation and rescheduling","text":"Patients may request cancellation or rescheduling. Verify the appointment identifier and patient identity before changing an existing appointment. Do not cancel an existing appointment until the patient explicitly confirms the change."},
+  {"id":"urgent","title":"Urgent symptoms","text":"Scheduling staff do not triage symptoms. If a patient describes severe chest pain, trouble breathing, signs of stroke, or another immediate emergency, tell them to contact local emergency services now. Do not delay emergency care while looking for an appointment."},
+  {"id":"privacy","title":"Privacy and identity","text":"Collect only the minimum information needed to schedule. Do not disclose another patient's appointment details. Before booking, confirm the patient's name and date of birth match the requested record."},
+  {"id":"hours","title":"Clinic hours","text":"The clinic is open Monday through Friday, 8:00 AM to 5:00 PM. The clinic is closed on weekends. Appointment availability must come from the availability tool, not from these general hours."}
+]

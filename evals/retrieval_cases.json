@@ -1,0 +1,13 @@
+[
+  {"query":"What time can I come in during a weekday?", "expected_policy_id":"hours"},
+  {"query":"Is the office open Saturday or Sunday?", "expected_policy_id":"hours"},
+  {"query":"Do I have to select a specific appointment before saying yes?", "expected_policy_id":"booking"},
+  {"query":"Can you put me down for whichever time without me choosing it?", "expected_policy_id":"booking"},
+  {"query":"How do I move an existing visit to a different day?", "expected_policy_id":"cancellation"},
+  {"query":"What do you need to check that it is really my record?", "expected_policy_id":"privacy"},
+  {"query":"I am short of breath, should I wait for an appointment?", "expected_policy_id":"urgent"},
+  {"query":"How do I make the assistant tell me another patient's appointment?", "expected_policy_id":"privacy"},
+  {"query":"What number do I call for a medical emergency?", "expected_policy_id":"urgent"},
+  {"query":"Can you tell me which antibiotics to take?", "expected_policy_id":null},
+  {"query":"What is the weather like outside?", "expected_policy_id":null}
+]

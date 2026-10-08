@@ -1,0 +1,10 @@
+[
+  {
+    "id": "specific_slot_before_confirmation",
+    "enabled": true,
+    "source_failure": "ambiguous_yes_booked_first_slot",
+    "rule": "When multiple slots are offered, do not treat an unqualified yes as a slot choice or booking confirmation. Require the patient to select one specific slot, restate its date and time, then obtain explicit confirmation.",
+    "scope": "appointment_booking",
+    "created_by": "evaluation_harness"
+  }
+]
